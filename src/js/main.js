@@ -107,14 +107,17 @@ titles.forEach((title, index) => {
 const lastItem = document.getElementById('last-item');
 menuContainer.appendChild(lastItem);
 
-const menuButton = document.getElementById('menu-button');
-const closeButton = document.getElementById('close-button');
-const menu = document.getElementById('menu');
 
-menuButton.addEventListener('click', () => {
-    menu.classList.add('show');
+document.addEventListener("DOMContentLoaded", function() {
+    const menuButton = document.getElementById('menu-button');
+    const closeButton = document.getElementById('close-button');
+
+    menuButton.addEventListener('click', () => {
+        menuButton.classList.add('active');
+    });
+
+    closeButton.addEventListener('click', () => {
+        menuButton.classList.remove('active');
+    });
 });
 
-closeButton.addEventListener('click', () => {
-    menu.classList.remove('show');
-});

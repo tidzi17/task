@@ -24,11 +24,22 @@
                     margin-top: 5px;
                 }
             }
+            .menu-button,
+                .close-button {
+                    background: none;
+                    border: none;
+                    cursor: pointer;
+                    display: none;
+
+                    i {
+                        font-size: 20px;
+                    }
+                }
+
             .navigation{ 
                 width: 371px;
                 height: 21px;
                 margin-left: -336px;
-               
                 ul{
                     display: flex;
                     align-items: center;
@@ -42,6 +53,10 @@
                        font-size: 14px;
                        line-height: 21px;
                        color: $nav-gray;
+                       transition:  0.4s ease-in;
+                       &:hover{
+                        color: $primar-blue;
+                       }
                     }
                 }
             }
@@ -55,11 +70,13 @@
                     font-size: 14px;
                     color: $button-bg;
                     font-weight: 500;
+                    cursor: pointer;
                 }
                 button{
                     width: 98px;
                     height: 100%;
                     @include button;
+                    cursor: pointer;
                 }
                
             }
@@ -83,6 +100,7 @@
                     width: 170px;
                     height: 50px;
                     @include button;
+                    cursor: pointer;
                 }
 
                 .content-container__first-paragraph-one{
@@ -186,7 +204,12 @@
             margin: 70px auto 0px auto;
             width: 1090px;
             img{
-                
+                transition: transform 0.4s ease-in-out;
+                overflow: hidden;
+                cursor: pointer;
+                &:hover {
+                    transform: scale(1.1);
+                  }
                 width: 10%;
             }
         }
@@ -261,6 +284,12 @@
                     font-weight: 600;
                     line-height: normal;
                     text-decoration: none;
+                    transition: transform 0.4s ease-in-out;
+                    overflow: hidden;
+                    cursor: pointer;
+                    &:hover {
+                        transform: scale(1.1);
+                      }
                 }
 
             }
@@ -272,6 +301,7 @@
                 width: 170px;
                 height: 50px;
                 @include button;
+                cursor: pointer;
             }
         }
     }
@@ -315,12 +345,17 @@
                 }
                 a{
                     color: $link_blue;
-                 /*    text-align: right; */
                     font-size: 18px;
                     font-style: normal;
                     font-weight: 600;
                     line-height: normal;
                     text-decoration: none;
+                    transition: transform 0.4s ease-in-out;
+                    overflow: hidden;
+                    cursor: pointer;
+                    &:hover {
+                        transform: scale(1.1);
+                      }
                 }
             }
         }
@@ -336,9 +371,16 @@
                 border-radius: 12px;
                 background: #FFF;
                 box-shadow: 0px 65px 80px -46px rgba(226, 238, 249, 0.60);
+                transition: transform 0.4s ease-in-out;
+                overflow: hidden;
+                cursor: pointer;
+                &:hover {
+                    transform: scale(1.1);
+                  }
                 img{
                     width: 100%;
                     height: 227px;
+                    
                 }
                 .card-info{
                     margin: 20px auto 0 20px;
@@ -576,6 +618,7 @@
                 align-items: center;
                 font-weight: 500;
                 border: none;
+                cursor: pointer;
             }
         }
         &__second{
@@ -612,6 +655,7 @@
                     font-weight: 400;
                     font-style: normal;
                     line-height: normal;
+                    cursor: pointer;
                 }
             }
             p{
@@ -634,6 +678,7 @@
                 width: 117px;
                 height: 28.471px;
                 margin-top: 40px;
+                cursor: pointer;
             }
            }
         }
@@ -824,10 +869,70 @@
     }
 }
 @media only screen and (max-width: 768px) {
-   #container{
-    /* width: 100vw; */
-    border: 1px solid orange;
-   }
+
+    .header-container{
+        width: 100%;
+        .content{
+            width: 100%;
+            margin: 0 auto;
+            .nav-container{
+                .logo{
+                    width: 15vw;
+                    height: 2.5vh;
+                }
+                nav{
+                    display: none;
+                }
+               
+               
+                .buttons{
+                    height: 2.5vh;
+                    width: 25vw;
+                    p{font-size: 2vw;}
+                    button{
+                        width: 50%;
+                        font-size: 2vw;
+                    }
+                }
+            }
+            .content-container{
+                width: 100%;
+                flex-direction: column;
+                
+                &__first{
+                   width: 100%;
+                   margin: 13% auto 0 auto;
+                   text-align: center;
+                   .content-container__first-paragraph-one{
+                    width: 100%;
+                 align-self: center;
+                 font-size: 2.5vw;
+               
+                   }
+                   h1{
+                  margin-bottom: 2%;
+                  line-height: 20px;
+                   }
+                   .content-container__first-paragraph-second{
+                 width: 50%;
+                 align-self: center;
+                 margin-bottom: 2%;
+                 font-size: 2vw;
+                   }
+                   button{
+                    height: 2vh;
+                    align-self: center;
+                   }
+                }
+                &__second{
+                    height: 30vh;
+                    margin: 0 auto;
+                    
+                
+                }
+            }
+        }
+    }
    .clients-container{
     height: fit-content;
     &__content{
@@ -901,23 +1006,6 @@
         }
     }
    }
-    .header-container{
-        width: 100%;
-        .content{
-            width: 100%;
-            .nav-container{
-                .navigation{
-                 
-                   
-                }
-            }
-            .content-container{
-                width: 100%;
-                flex-direction: column;
-            }
-        }
-    }
-  
     .featured-container{
         width: 100%;
         height: fit-content;
@@ -982,9 +1070,92 @@
             }
         }
     }
+    .neigh-container{
+        height: fit-content;
+        &__content{
+            height: fit-content;
+            margin: 0 auto;
+            &__main{
+               flex-direction: column;
+               height: fit-content;
+               &__img_card{
+                margin: 0 auto;
+                height: 100%;
+                
+                &__img{
+                    height: 43vh;
+                    width: 50vw;
+                   
+                }
+               }
+               &__text{
+                align-items: center;
+                text-align: center;
+                width: 100%;
+                margin: 40% auto 0 auto;
+                display: flex;
+                flex-direction: column;
+                height: auto;
+                .line{
+                    align-self: center;
+                }
+                h2{
+                    width: 100%;
+                }
+               }
+            
+            }
+            &__countdown{
+                flex-direction: column;
+                margin: 0 auto;
+                height: auto;
+                margin: 5% auto;
+                .counter-item{
+                    margin: 0 auto;
+                    text-align: center;
+                    .counter{
+                        font-size: 7vw;
+                        margin-bottom: 1%;
+                    }
+                    span{
+                        font-size: 2vw;
+                    }
+                }
+               }
+        }
+    }
+    .newsletter-container{
+       height: fit-content;
+       &__content{
+        height: 30vh;
+        &__first{
+          margin-top: 10%;
+          width: 50%;
+          h2{
+            font-size: 2.5vw;
+            width: max-content;
+            line-height: 10px;
+          }
+          p{
+            font-size: 1.5vw;
+            width: 100;
+          }
+          button{
+            width: 60%;
+            height: 15%;
+            font-size: 1.2vw;
+          }
+        }
+        &__second{
+            height: 35vh;
+            img{
+                height: 100%;
+            }
+        }
+       }
+    }
     .footer-container{
         width: 100%;
-        border: 1px solid red;
         &__content{
             width: 100%;
             height: auto;
