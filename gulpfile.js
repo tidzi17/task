@@ -1,5 +1,5 @@
 const gulp = require('gulp');
-const sass = require('gulp-sass')(require('sass')); // Specify 'sass' as the compiler
+const sass = require('gulp-sass')(require('sass')); 
 const rename = require('gulp-rename');
 
 function compileSass() {
