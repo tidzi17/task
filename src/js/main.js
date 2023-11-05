@@ -4,7 +4,7 @@ const featuredHomes = [
     {
         id: 1,
         alt: "House 1",
-        image: "./assets/assets/images/property-1.jpg",
+        image: "./src/assets/assets/images/property-1.jpg",
         price: '$35000',
         description: "8502 Preston Rd. Inglewood, Maine 98280",
         beds: '5',
@@ -14,7 +14,7 @@ const featuredHomes = [
     {
         id: 2,
         alt: "House 2",
-        image: "./assets/assets/images/property-2.jpg",
+        image: "./src/assets/assets/images/property-2.jpg",
         price: '$35000',
         description: "8502 Preston Rd. Inglewood, Maine 98280",
         beds: '5',
@@ -24,7 +24,7 @@ const featuredHomes = [
     {
         id: 3,
         alt: "House 2",
-        image: "../assets/assets/images/property-3.jpg",
+        image: "./src/assets/assets/images/property-3.jpg",
         price: '$35000',
         description: "8502 Preston Rd. Inglewood, Maine 98280",
         beds: '5',
