@@ -106,3 +106,15 @@ titles.forEach((title, index) => {
 });
 const lastItem = document.getElementById('last-item');
 menuContainer.appendChild(lastItem);
+
+const menuButton = document.getElementById('menu-button');
+const closeButton = document.getElementById('close-button');
+const menu = document.getElementById('menu');
+
+menuButton.addEventListener('click', () => {
+    menu.classList.add('show');
+});
+
+closeButton.addEventListener('click', () => {
+    menu.classList.remove('show');
+});
