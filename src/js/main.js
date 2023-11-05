@@ -45,9 +45,9 @@ featuredHomes.forEach((home) => {
         <div class="price">${home.price}</div>
         <div class="description">${home.description}</div>
         <div class="features">
-            <div class="feature-item"><img src="../assets/assets/images/cards-icons/bedicon.png"></img><p>${home.beds} Beds</p></div>
-            <div class="feature-item"><img src="../assets/assets/images/cards-icons/bathicon.png"></img><p>${home.bath} Bath</p></div>
-            <div class="feature-item"><img src="../assets/assets/images/cards-icons/sqfticon.png"></img><p>${home.sqft} Sqft</p></div>
+            <div class="feature-item"><img src="./src/assets/assets/images/cards-icons/bedicon.png"></img><p>${home.beds} Beds</p></div>
+            <div class="feature-item"><img src="./src/assets/assets/images/cards-icons/bathicon.png"></img><p>${home.bath} Bath</p></div>
+            <div class="feature-item"><img src="./src/assets/assets/images/cards-icons/sqfticon.png"></img><p>${home.sqft} Sqft</p></div>
         </div>
         </div>
     `;
