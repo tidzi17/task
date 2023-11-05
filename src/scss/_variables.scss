@@ -1,0 +1,51 @@
+//COLORS
+$white: #ffffff;
+$black: #000;
+$primary-bg: #E6F0FF;
+$second-bg: #F5FAFE;
+$button-bg: #0F1B4C;
+$primar-blue: #000339;
+$paragraph-primaryGrey: #5A6473;
+$paragraph-secondaryGrey: #687690;
+$paragraph-thirdGrey: #7D8589;
+$paragraph-black: #3B3C45;
+$headerPrimary: #000336;
+$link_blue: #0689FF;
+$nav-gray: #4F5361;
+//featured
+$cards-des: #A3A6AB;
+$cards-inf: #4D4D52;
+
+//neighbourhood
+$neigh-card-p: #A7A7A7;
+$neigh-devider: #E9E9E9;
+$neigh-countup-span: #7B8087;
+
+//newletter
+$button-text: #002366;
+
+//footer
+$footer-item-title: #1C1C1D;
+$footer-item-li: #7A7A7E;
+$footer-copyright: #C2C2C2;
+
+
+@mixin button{
+    background-color: $button-bg;
+    border-radius: 12px;
+    font-size: 14px;
+    align-items: center;
+    font-weight: 500;
+    border: none;
+    color: #FFFFFF;
+}
+
+@mixin flexColumnRuls{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+$breakpoints: (phone: 640px, 
+               tablet: 768px, 
+               desktop: 1024px) !default;
