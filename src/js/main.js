@@ -57,24 +57,38 @@ featuredHomes.forEach((home) => {
 
 const counters = document.querySelectorAll('.counter');
 
-counters.forEach((counter) => {
-    counter.innerText = '0';
+const options = {
+  threshold: 0.6, // Adjust this threshold as needed
+};
 
-    const updateCounter = () => {
-        const target = +counter.getAttribute
-        ('data-target');
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      const counter = entry.target;
+      counter.innerText = '0';
+
+      const updateCounter = () => {
+        const target = +counter.getAttribute('data-target');
         const c = +counter.innerText;
 
         const increment = target / 250;
 
-        if (c < target){
-            counter.innerText = `${Math.ceil(c + increment)}`;
-            setTimeout(updateCounter, 1);
+        if (c < target) {
+          counter.innerText = `${Math.ceil(c + increment)}`;
+          setTimeout(updateCounter, 1);
         } else {
-            counter.innerText = c === 5000 ? '5000+' : c === 170 ? '170+' : target;
+          counter.innerText = c === 5000 ? '5000+' : c === 170 ? '170+' : target;
         }
-    };
-    updateCounter();
+      };
+
+      updateCounter();
+      observer.unobserve(counter); 
+    }
+  });
+}, options);
+
+counters.forEach((counter) => {
+  observer.observe(counter);
 });
 
 const titles = ["Product", "Resources", "Company"];
@@ -91,7 +105,7 @@ titles.forEach((title, index) => {
     titleElement.textContent = title;
 
     const menuItem = document.createElement('div');
-    menuItem.classList.add('menu-item'); // Add the "menu-item" class
+    menuItem.classList.add('menu-item'); 
 
     const itemsList = document.createElement('ul');
     items[index].forEach((item) => {
