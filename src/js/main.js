@@ -58,7 +58,7 @@ featuredHomes.forEach((home) => {
 const counters = document.querySelectorAll('.counter');
 
 const options = {
-  threshold: 0.6, // Adjust this threshold as needed
+  threshold: 0.6,
 };
 
 const observer = new IntersectionObserver((entries, observer) => {
@@ -90,6 +90,8 @@ const observer = new IntersectionObserver((entries, observer) => {
 counters.forEach((counter) => {
   observer.observe(counter);
 });
+
+
 
 const titles = ["Product", "Resources", "Company"];
 const items = [
