@@ -123,17 +123,28 @@ titles.forEach((title, index) => {
 const lastItem = document.getElementById('last-item');
 menuContainer.appendChild(lastItem);
 
-
 document.addEventListener("DOMContentLoaded", function() {
     const menuButton = document.getElementById('menu-button');
     const closeButton = document.getElementById('close-button');
-
+    const navigation = document.getElementById('nav');
+  
     menuButton.addEventListener('click', () => {
-        menuButton.classList.add('active');
+      menuButton.style.display = 'none';
+      closeButton.style.display = 'block';
+      navigation.style.display = 'flex';
     });
-
+  
     closeButton.addEventListener('click', () => {
-        menuButton.classList.remove('active');
+      menuButton.style.display = 'block';
+      closeButton.style.display = 'none';
+      navigation.style.display = 'none';
     });
-});
+  });
+  
+
+/* function menuOnClick() {
+    document.getElementById("menu-button").classList.toggle("change");
+    document.getElementById("nav").classList.toggle("change");
+    
+  } */
 
